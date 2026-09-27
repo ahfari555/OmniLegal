@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags for US Audience -->
+  <title>OmniLegal - Ultimate US Legal Tools, Demand Generator & Contract Clause Checker</title>
+  <meta name="description" content="100% free, secure, and client-side US legal toolkit. Generate demand letters, check statute of limitations, analyze contract clauses, and estimate traffic ticket fines instantly.">
+  <meta name="keywords" content="us legal help, demand letter generator, contract risk checker, statute of limitations us, small claims guide">
+  <meta name="author" content="OmniLegal">
+  <meta name="robots" content="index, follow">
+
+  <!-- Google Search Console Verification Tag -->
+  <meta name="google-site-verification" content="google45274bc7d9133ca5" />
+
+  <!-- Google AdSense Script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2805918301542012" crossorigin="anonymous"></script>
+
+  <!-- Favicon SVG -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
+
+  <!-- Google Font: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+      transition: background-color 0.3s ease;
+    }
+    html.dark body {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #020617 100%);
+      color: #f8fafc;
+    }
+    .pastel-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+      box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
+      transition: all 0.3s ease;
+    }
+    html.dark .pastel-card {
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #0f172a 0%, #3b82f6 50%, #1d4ed8 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    html.dark .gradient-text {
+      background: linear-gradient(135deg, #f8fafc 0%, #60a5fa 50%, #3b82f6 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="font-sans min-h-screen flex flex-col antialiased text-slate-800 dark:text-slate-100">
+
+  <!-- TOP NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white/70 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-6 py-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-slate-900 via-blue-600 to-indigo-700 flex items-center justify-center font-black text-xl text-white shadow-md">
+          ⚖️
+        </div>
+        <span class="text-xl font-extrabold tracking-tight text-slate-800 dark:text-white">Omni<span class="gradient-text">Legal</span></span>
+      </a>
+
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800">
+          <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span> 100% Client-Side Privacy
+        </span>
+        <button onclick="toggleDarkMode()" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-amber-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+          <span id="themeIcon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="max-w-7xl mx-auto px-6 pt-10 pb-6 text-center">
+    <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950 px-3 py-1 rounded-full border border-blue-100 dark:border-blue-900 mb-3 inline-block">Ultimate US Legal Tech Platform</span>
+    <h1 class="text-3xl md:text-5xl font-black tracking-tight text-slate-800 dark:text-white mb-3">
+      Advanced US Legal Tools & <span class="gradient-text">Clause Checkers.</span>
+    </h1>
+    <p class="text-slate-500 dark:text-slate-400 text-sm md:text-base max-w-2xl mx-auto font-medium">
+      Comprehensive browser-based legal drafting utilities, small claims checklists, clause risk scanners, and penalty estimators.
+    </p>
+  </section>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-6 py-6 flex-1 w-full space-y-8">
+
+    <!-- TAB NAVIGATION -->
+    <div class="flex justify-center mb-4">
+      <div class="bg-slate-200/70 dark:bg-slate-800 p-1.5 rounded-2xl flex flex-wrap gap-2 justify-center">
+        <button onclick="switchTab('demand')" id="tabBtnDemand" class="px-4 py-2 rounded-xl text-xs font-bold transition bg-white dark:bg-slate-700 text-slate-800 dark:text-white shadow-sm">📄 Demand Letter</button>
+        <button onclick="switchTab('clause')" id="tabBtnClause" class="px-4 py-2 rounded-xl text-xs font-bold transition text-slate-600 dark:text-slate-400 hover:text-slate-800">🔍 Clause Risk Checker</button>
+        <button onclick="switchTab('claims')" id="tabBtnClaims" class="px-4 py-2 rounded-xl text-xs font-bold transition text-slate-600 dark:text-slate-400 hover:text-slate-800">🏛️ Small Claims Guide</button>
+        <button onclick="switchTab('limit')" id="tabBtnLimit" class="px-4 py-2 rounded-xl text-xs font-bold transition text-slate-600 dark:text-slate-400 hover:text-slate-800">⏳ Statute of Limitations</button>
+        <button onclick="switchTab('ticket')" id="tabBtnTicket" class="px-4 py-2 rounded-xl text-xs font-bold transition text-slate-600 dark:text-slate-400 hover:text-slate-800">🚗 Traffic Ticket</button>
+      </div>
+    </div>
+
+    <!-- TAB 1: DEMAND LETTER GENERATOR -->
+    <div id="tabContentDemand" class="pastel-card p-6 md:p-8 rounded-3xl space-y-6">
+      <div>
+        <h2 class="text-lg font-black text-slate-800 dark:text-white mb-1">📝 Formal Payment Demand Notice Generator</h2>
+        <p class="text-xs text-slate-500 dark:text-slate-400">Instantly generate a structured debt recovery or dispute payment notice conforming to standard US legal communication formats.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Creditor / Your Full Name:</label>
+          <input type="text" id="creditorName" placeholder="e.g., John Doe" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
+        </div>
+        <div>
+          <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Debtor / Recipient Name & Entity:</label>
+          <input type="text" id="debtorName" placeholder="e.g., Jane Smith / ABC Corp" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
+        </div>
+        <div>
+          <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Outstanding Balance ($):</label>
+          <input type="number" id="dueAmount" placeholder="e.g., 2500" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
+        </div>
+        <div>
+          <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Payment Deadline Period (Days):</label>
+          <input type="number" id="dueDays" value="14" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
+        </div>
+      </div>
+
+      <div>
+        <button onclick="generateDemandLetter()" class="bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-bold py-3 px-6 rounded-xl text-xs transition shadow-md">
+          Generate Demand Letter ✨
+        </button>
+      </div>
+
+      <div class="space-y-2">
+        <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block">Generated Legal Document:</label>
+        <textarea id="letterOutput" readonly rows="8" class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl p-4 text-xs font-mono text-slate-700 dark:text-slate-300 focus:outline-none resize-none" placeholder="Generated text will appear here..."></textarea>
+        <button onclick="copyText('letterOutput')" class="bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 text-slate-700 dark:text-slate-200 font-bold py-2.5 px-5 rounded-xl text-xs transition">
+          Copy Notice to Clipboard 📋
+        </button>
+      </div>
+    </div>
+
+    <!-- TAB 2: CLAUSE RISK CHECKER -->
+    <div id="tabContentClause" class="hidden pastel-card p-6 md:p-8 rounded-3xl space-y-6">
+      <div>
+        <h2 class="text-lg font-black text-slate-800 dark:text-white mb-1">🔍 Contract Clause Risk Scanner</h2>
+        <p class="text-xs text-slate-500 dark:text-slate-400">Paste a legal clause or contract excerpt below to scan for common high-risk phrases (e.g., liability waivers, binding arbitration, non-competes).</p>
+      </div>
+
+      <div>
+        <textarea id="clauseInput" rows="6" placeholder="Paste contract clause here..." class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-4 text-xs font-medium focus:outline-none resize-none"></textarea>
+      </div>
+
+      <div>
+        <button onclick="scanClause()" class="bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-bold py-3 px-6 rounded-xl text-xs transition shadow-md">
+          Analyze Clause Risks 🛡️
+        </button>
+      </div>
+
+      <div id="clauseResult" class="hidden bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl p-5 space-y-3">
+        <div class="text-xs font-extrabold uppercase text-slate-500">Scan Findings:</div>
+        <div id="clauseFindings" class="text-xs text-slate-700 dark:text-slate-300 space-y-2 font-medium"></div>
+      </div>
+    </div>
+
+    <!-- TAB 3: SMALL CLAIMS GUIDE -->
+    <div id="tabContentClaims" class="hidden pastel-card p-6 md:p-8 rounded-3xl space-y-6">
+      <div>
+        <h2 class="text-lg font-black text-slate-800 dark:text-white mb-1">🏛️ US Small Claims Court Step-by-Step Guide</h2>
+        <p class="text-xs text-slate-500 dark:text-slate-400">Essential milestones to successfully file and manage a small claims dispute in municipal or county courts across the United States.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-blue-50 dark:bg-blue-950/40 p-5 rounded-2xl border border-blue-100 dark:border-blue-900 space-y-2">
+          <div class="text-sm font-black text-blue-600 dark:text-blue-400">Step 1: Notice & Demand</div>
+          <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">Always send a written final demand notice via certified mail before opening an official court case. Judges look favorably on documented attempts to resolve disputes amicably.</p>
+        </div>
+        <div class="bg-indigo-50 dark:bg-indigo-950/40 p-5 rounded-2xl border border-indigo-100 dark:border-indigo-900 space-y-2">
+          <div class="text-sm font-black text-indigo-600 dark:text-indigo-400">Step 2: File the Claim</div>
+          <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">Visit your local county clerk office or municipal court website. Complete the Plaintiff's Claim form (e.g., SC-100 in California) and pay standard filing fees ($30 - $100+).</p>
+        </div>
+        <div class="bg-purple-50 dark:bg-purple-950/40 p-5 rounded-2xl border border-purple-100 dark:border-purple-900 space-y-2">
+          <div class="text-sm font-black text-purple-600 dark:text-purple-400">Step 3: Service of Process</div>
+          <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">Legally notify the defendant. They must be served copies of court papers through a registered process server, sheriff, or certified mail according to state laws.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: STATUTE OF LIMITATIONS LOOKUP -->
+    <div id="tabContentLimit" class="hidden pastel-card p-6 md:p-8 rounded-3xl space-y-6">
+      <div>
+        <h2 class="text-lg font-black text-slate-800 dark:text-white mb-1">⏳ Statute of Limitations Quick Reference (US Civil Claims)</h2>
+        <p class="text-xs text-slate-500 dark:text-slate-400">General timeframe benchmarks for filing civil lawsuits after a dispute or breach occurs.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-white dark:bg-slate-800 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-1">
+          <div class="text-xs font-bold text-blue-600">Written Contracts</div>
+          <div class="text-lg font-black text-slate-800 dark:text-white">3 to 10 Years</div>
+          <p class="text-[11px] text-slate-500">Varies by state (e.g., 4 years in California, 6 years in New York/Texas).</p>
+        </div>
+        <div class="bg-white dark:bg-slate-800 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-1">
+          <div class="text-xs font-bold text-indigo-600">Oral Agreements</div>
+          <div class="text-lg font-black text-slate-800 dark:text-white">2 to 4 Years</div>
+          <p class="text-[11px] text-slate-500">Typically shorter due to difficulties in proving verbal terms.</p>
+        </div>
+        <div class="bg-white dark:bg-slate-800 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-1">
+          <div class="text-xs font-bold text-purple-600">Property Damage</div>
+          <div class="text-lg font-black text-slate-800 dark:text-white">2 to 3 Years</div>
+          <p class="text-[11px] text-slate-500">Standard window for filing claims on vehicle or real estate damage.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 5: TRAFFIC TICKET ESTIMATOR -->
+    <div id="tabContentTicket" class="hidden pastel-card p-6 md:p-8 rounded-3xl space-y-6">
+      <div>
+        <h2 class="text-lg font-black text-slate-800 dark:text-white mb-1">🚗 US Traffic Ticket Fine & Penalty Estimator</h2>
+        <p class="text-xs text-slate-500 dark:text-slate-400">Estimate standard municipal fines and license points for common driving infractions across typical US states.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Select Infraction Type:</label>
+          <select id="ticketType" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
+            <option value="speeding10">Speeding (1-15 mph over limit)</option>
+            <option value="speeding20">Speeding (16-25 mph over limit)</option>
+            <option value="redlight">Running a Red Light / Stop Sign</option>
+            <option value="phone">Cell Phone Usage / Texting While Driving</option>
+            <option value="illegalturn">Illegal U-Turn / Improper Lane Change</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">State Jurisdiction Tier:</label>
+          <select id="stateTier" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
+            <option value="standard">Standard State Average (e.g., TX, FL, OH)</option>
+            <option value="high">High Penalty State (e.g., CA, NY, NJ)</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button onclick="calculateTicket()" class="bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-bold py-3 px-6 rounded-xl text-xs transition shadow-md">
+          Calculate Penalty & Points 📊
+        </button>
+      </div>
+
+      <div id="ticketResult" class="hidden bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 space-y-3">
+        <div class="text-sm font-extrabold text-slate-800 dark:text-white">Estimated Penalty Breakdown:</div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-white dark:bg-slate-800 p-3 rounded-xl border border-slate-200 dark:border-slate-700">
+            <div class="text-[10px] uppercase font-bold text-slate-400">Estimated Fine Range</div>
+            <div id="resFine" class="text-base font-black text-blue-600">$150 - $250</div>
+          </div>
+          <div class="bg-white dark:bg-slate-800 p-3 rounded-xl border border-slate-200 dark:border-slate-700">
+            <div class="text-[10px] uppercase font-bold text-slate-400">DMV License Points</div>
+            <div id="resPoints" class="text-base font-black text-rose-600">1 Point</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEO ARTICLE SECTION FOR HIGH CPC -->
+    <section class="pastel-card p-8 rounded-3xl space-y-4">
+      <h2 class="text-xl font-black text-slate-800 dark:text-white">Understanding US Legal Self-Help & Dispute Resolution</h2>
+      <p class="text-xs md:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
+        Navigating the United States legal system efficiently starts with structured documentation, accurate timeline tracking, and understanding municipal statutes. Whether managing minor civil disputes, preparing small claims court filings, or evaluating traffic ticket penalties, having access to clear self-help guides saves significant time and legal expenditure. <strong>OmniLegal</strong> empowers individuals and small business owners with instant, browser-based utilities to organize their legal requirements safely and privately.
+      </p>
+
+      <h3 class="text-base font-bold text-slate-800 dark:text-white pt-2">Key Considerations in US Civil & Municipal Procedures</h3>
+      <ul class="list-disc list-inside text-xs md:text-sm text-slate-600 dark:text-slate-300 space-y-1.5 font-medium">
+        <li><strong>Statute of Limitations:</strong> Every state imposes strict deadlines for filing civil claims (ranging from 1 to 6 years depending on contract types).</li>
+        <li><strong>Certified Documentation:</strong> Maintaining paper trails, email logs, and formal demand receipts is critical for successful court mediation.</li>
+        <li><strong>Traffic School Eligibility:</strong> Many jurisdictions allow eligible drivers to mask traffic points by completing certified defensive driving programs.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 py-8 text-center text-xs text-slate-500 dark:text-slate-400 font-medium mt-12">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>© 2026 OmniLegal. Educational legal templates. Not formal legal counsel.</p>
+      <div class="flex gap-6">
+        <a href="privacy.html" class="hover:text-slate-800 dark:hover:text-white transition">Privacy Policy</a>
+        <a href="terms.html" class="hover:text-slate-800 dark:hover:text-white transition">Terms of Service</a>
+        <a href="contact.html" class="hover:text-slate-800 dark:hover:text-white transition">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    function toggleDarkMode() {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
+        document.getElementById('themeIcon').innerText = '🌙';
+      } else {
+        document.documentElement.classList.remove('light');
+        document.documentElement.classList.add('dark');
+        document.getElementById('themeIcon').innerText = '☀️';
+      }
+    }
+
+    function switchTab(tab) {
+      const tabs = ['demand', 'clause', 'claims', 'limit', 'ticket'];
+      tabs.forEach(t => {
+        const btn = document.getElementById('tabBtn' + t.charAt(0).toUpperCase() + t.slice(1));
+        const con = document.getElementById('tabContent' + t.charAt(0).toUpperCase() + t.slice(1));
+        if (btn && con) {
+          if (t === tab) {
+            btn.className = "px-4 py-2 rounded-xl text-xs font-bold transition bg-white dark:bg-slate-700 text-slate-800 dark:text-white shadow-sm";
+            con.classList.remove('hidden');
+          } else {
+            btn.className = "px-4 py-2 rounded-xl text-xs font-bold transition text-slate-600 dark:text-slate-400 hover:text-slate-800";
+            con.classList.add('hidden');
+          }
+        }
+      });
+    }
+
+    function generateDemandLetter() {
+      const creditor = document.getElementById('creditorName').value || '[Your Name/Business]';
+      const debtor = document.getElementById('debtorName').value || '[Recipient Name]';
+      const amount = document.getElementById('dueAmount').value || '[Amount]';
+      const days = document.getElementById('dueDays').value || '14';
+      const currentDate = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+      const letterText = `FORMAL DEMAND FOR PAYMENT\nDate: ${currentDate}\n\nTo:\n${debtor}\n\nFrom:\n${creditor}\n\nSUBJECT: DEMAND FOR IMMEDIATE PAYMENT OF OUTSTANDING BALANCE ($${amount})\n\nDear ${debtor},\n\nThis letter serves as a formal demand for payment regarding the outstanding balance of $${amount} currently past due to ${creditor}.\n\nDespite previous informal communications, this amount remains unpaid. Please remit the full payment of $${amount} within ${days} calendar days from the date of this letter.\n\nIf payment is not received by the specified deadline, ${creditor} reserves the right to pursue all available legal remedies, including filing a claim in Small Claims Court, which may result in additional court costs and legal fees being added to your balance.\n\nPlease remit payment via the agreed-upon channels immediately to resolve this matter.\n\nSincerely,\n\n${creditor}`;
+
+      document.getElementById('letterOutput').value = letterText;
+    }
+
+    function copyText(elementId) {
+      const text = document.getElementById(elementId);
+      if (!text.value) { alert('No text generated to copy!'); return; }
+      text.select();
+      navigator.clipboard.writeText(text.value);
+      alert('Copied to clipboard successfully!');
+    }
+
+    function scanClause() {
+      const text = document.getElementById('clauseInput').value.toLowerCase();
+      const resBox = document.getElementById('clauseResult');
+      const findings = document.getElementById('clauseFindings');
+      if (!text.trim()) { alert('Please paste a clause to analyze.'); return; }
+
+      let alerts = [];
+      if (text.includes('arbitration') || text.includes('binding')) {
+        alerts.push("⚠️ <b>Binding Arbitration Clause Detected:</b> This limits your right to sue in a public court and forces private dispute resolution.");
+      }
+      if (text.includes('liability') || text.includes('indemnif')) {
+        alerts.push("⚠️ <b>Liability Waiver / Indemnification Found:</b> Shifts financial or legal responsibility heavily onto one party.");
+      }
+      if (text.includes('non-compete') || text.includes('restrict')) {
+        alerts.push("⚠️ <b>Restrictive Covenants / Non-Compete:</b> May limit future employment or business operations based on state enforceability.");
+      }
+      if (text.includes('terminate') || text.includes('at-will')) {
+        alerts.push("ℹ️ <b>Termination Provision:</b> Governs conditions for ending the agreement. Verify notice periods.");
+      }
+
+      if (alerts.length === 0) {
+        alerts.push("✅ No major high-risk red flag keywords detected in this snippet, but standard legal review is always recommended.");
+      }
+
+      findings.innerHTML = alerts.join('<br>');
+      resBox.classList.remove('hidden');
+    }
+
+    function calculateTicket() {
+      const type = document.getElementById('ticketType').value;
+      const tier = document.getElementById('stateTier').value;
+      const resBox = document.getElementById('ticketResult');
+      let fine = "$150 - $250";
+      let points = "1 Point";
+
+      if (type === 'speeding10') {
+        fine = tier === 'high' ? "$200 - $350" : "$120 - $220";
+        points = "1 Point";
+      } else if (type === 'speeding20') {
+        fine = tier === 'high' ? "$350 - $550" : "$250 - $400";
+        points = "2 Points";
+      } else if (type === 'redlight') {
+        fine = tier === 'high' ? "$450 - $600" : "$250 - $350";
+        points = "1 - 2 Points";
+      } else if (type === 'phone') {
+        fine = tier === 'high' ? "$300 - $500" : "$150 - $300";
+        points = "0 - 1 Point";
+      } else if (type === 'illegalturn') {
+        fine = tier === 'high' ? "$250 - $400" : "$130 - $250";
+        points = "1 Point";
+      }
+
+      document.getElementById('resFine').innerText = fine;
+      document.getElementById('resPoints').innerText = points;
+      resBox.classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
